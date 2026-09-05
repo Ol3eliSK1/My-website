@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>My Website</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32.png"
+    />
+    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="opening-page" id="top" aria-label="Portfolio opening page">
+      <video
+        class="opening-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="assets/images/S3.jpg"
+      >
+        <source src="assets/media/clip-index.mp4" type="video/mp4" />
+      </video>
+      <div class="opening-backdrop" aria-hidden="true"></div>
+      <div class="opening-content">
+        <p class="opening-kicker">PERSONAL PORTFOLIO</p>
+        <h1>WELCOME<br /><span>TO MY WEBSITE</span></h1>
+        <p class="opening-subtitle">Phatsawat Buathong — IT</p>
+        <a class="opening-enter" href="#portfolio-index"
+          >VIEW PORTFOLIO <span>↘</span></a
+        >
+      </div>
+      <a
+        class="opening-scroll"
+        href="#portfolio-index"
+        aria-label="Scroll to portfolio index"
+        ><span>SCROLL TO ENTER</span><i aria-hidden="true"></i
+      ></a>
+    </section>
+    <main class="stage" id="portfolio-index">
+      <img class="spider" src="assets/images/S3.jpg" alt="Spider-Man" /><canvas
+        id="reveal"
+        aria-label="Portrait reveal"
+      ></canvas>
+      <div class="hero-name" aria-label="Phatsawat Buathong">
+        <span>Phatsawat</span><strong>Buathong</strong
+        ><small>IT / PORTFOLIO</small>
+      </div>
+      <nav class="hero-tabs" aria-label="Resume navigation">
+        <a href="#about">About</a><a href="#education">Education</a
+        ><a href="#experience">Experience</a><a href="#skills">Skills</a
+        ><a href="#contact">Contact</a>
+      </nav>
+      <div class="hint">Move your mouse over Spider-Man</div>
+    </main>
+    <div class="tab-pulse" aria-hidden="true"></div>
+    <div class="page-transition" aria-hidden="true"></div>
+    <audio
+      id="ohYeah"
+      src="assets/media/oh-yeah.mp3"
+      preload="auto"
+      autoplay
+    ></audio>
+    <div class="audio-player" aria-label="Music controls">
+      <button
+        id="audioToggle"
+        class="audio-launcher"
+        type="button"
+        aria-label="Open music controls"
+        aria-expanded="false"
+        title="Music controls"
+      >
+        <img
+          src="assets/media/logo-spiderman.jpg"
+          alt=""
+          aria-hidden="true"
+        /><span class="audio-launcher-dot" aria-hidden="true"></span>
+      </button>
+      <div class="audio-popup">
+        <div class="audio-popup-head">
+          <span class="audio-eyebrow">NOW PLAYING</span
+          ><span class="track" id="trackName">Oh yeah</span
+          ><span class="level" id="volumeLevel">50%</span>
+        </div>
+        <div class="audio-controls">
+          <button id="playAudio" type="button" aria-label="Play or pause">
+            ▶</button
+          ><button
+            id="nextTrack"
+            class="track-switch"
+            type="button"
+            aria-label="Switch song"
+            title="Switch song"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M17.65 6.35A7.95 7.95 0 0 0 12 4a8 8 0 1 0 7.75 10h-2.1A6 6 0 1 1 16.24 7.8L13 11h7V4l-2.35 2.35Z"
+              />
+            </svg></button
+          ><button
+            id="shuffleTrack"
+            class="mode-toggle"
+            type="button"
+            aria-label="Enable shuffle"
+            aria-pressed="false"
+            title="Shuffle"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M16 3h5v5h-2V6.41l-4.29 4.3-1.42-1.42L17.59 5H16V3ZM3.5 6.5h2.1c1.2 0 2.34.57 3.06 1.53l6.68 8.94a2 2 0 0 0 1.6.8H21v2h-4.06a4 4 0 0 1-3.2-1.6L7.06 9.23A2 2 0 0 0 5.46 8.5H3.5v-2Zm0 9h1.96c1.2 0 2.34-.57 3.06-1.53l1.06-1.41 1.42 1.42-1.06 1.41a4 4 0 0 1-3.2 1.6H3.5v-2Z"
+              />
+              <path
+                d="M16 16h1.59l-1.88-1.88 1.42-1.42L19 14.59V13h2v5h-5v-2Z"
+              />
+            </svg></button
+          ><button
+            id="loopTrack"
+            class="mode-toggle"
+            type="button"
+            aria-label="Enable loop"
+            aria-pressed="false"
+            title="Loop current song"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path
+                d="M7 7h9.17l-1.58 1.59L16 10l4-4-4-4-1.41 1.41L16.17 5H7a5 5 0 0 0 0 10h2v-2H7a3 3 0 0 1 0-6Zm10 2h-2v2h2a3 3 0 0 1 0 6H7.83l1.58-1.59L8 14l-4 4 4 4 1.41-1.41L7.83 19H17a5 5 0 0 0 0-10Z"
+              />
+            </svg></button
+          ><button id="volumeDown" type="button" aria-label="Decrease volume">
+            −</button
+          ><button id="volumeUp" type="button" aria-label="Increase volume">
+            +
+          </button>
+        </div>
+      </div>
+    </div>
+    <main class="resume" id="resume">
+      <nav class="resume-nav">
+        <strong>Phatsawat Buathong / IT</strong><a href="#top">Back to top ↑</a>
+      </nav>
+      <section class="resume-section" id="about">
+        <div class="resume-head">
+          <h2>01 / About me</h2>
+          <span>Profile</span>
+        </div>
+        <div class="profile-grid">
+          <h3>IT support<br />with intent.</h3>
+          <figure class="profile-photo">
+            <img src="assets/images/Me-clean.png" alt="Phatsawat Buathong" />
+          </figure>
+          <p>
+            A dedicated Information Technology graduate with hands-on experience
+            in IT Helpdesk, network maintenance, and workflow system
+            development. Skilled in hardware/software troubleshooting, user
+            support, and database management with a strong customer-service
+            mindset. Proven ability to work efficiently under pressure,
+            collaborate effectively in teams, and eager to contribute technical
+            support capabilities to the organization.
+          </p>
+        </div>
+      </section>
+      <section class="resume-section" id="education">
+        <div class="resume-head">
+          <h2>02 / Education</h2>
+          <span>2022 — 2025</span>
+        </div>
+        <div class="education-grid">
+          <div class="date">
+            2022 — 2025<br />Rajabhat Rajanagarindra University
+          </div>
+          <div>
+            <h3>Faculty of Science and Technology</h3>
+            <p class="role">Major: Information Technology</p>
+          </div>
+        </div>
+      </section>
+      <section class="resume-section" id="experience">
+        <div class="resume-head">
+          <h2>03 / Work experience</h2>
+          <span>June — October 2025</span>
+        </div>
+        <div class="experience-grid">
+          <div class="date">
+            Thai Tsuzuki<br />Co., Ltd<br /><br />IT / Technical Support
+          </div>
+          <div>
+            <h3>Helpdesk & Technical Support</h3>
+            <p class="role">Information Technology Department</p>
+            <ul>
+              <li>
+                Provided IT Helpdesk and Technical Support for ERP systems and
+                internal users, resolving computer, telephone, and peripheral
+                device issues to ensure continuous workflow.
+              </li>
+              <li>
+                Co-planned, designed, and developed internal workflow systems,
+                including a repair request system and a production management
+                system, to improve employee convenience and efficiency.
+              </li>
+              <li>
+                Managed and summarized data and controlled access permissions
+                for internal databases to maintain security and confidentiality.
+              </li>
+              <li>
+                Configured operating systems and installed application software
+                on user computers according to operational needs.
+              </li>
+              <li>
+                Monitored, inspected, and maintained CCTV and internal security
+                systems to keep them fully functional and efficient.
+              </li>
+              <li>
+                Assembled, inspected, and installed computer hardware components
+                and PC panel displays, including routine maintenance.
+              </li>
+              <li>
+                Planned, filmed, and edited industrial-process videos for
+                presentations and internal employee training.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="resume-section" id="skills">
+        <div class="resume-head">
+          <h2>04 / Skills & technical tools</h2>
+          <span>Toolkit</span>
+        </div>
+        <div class="skills-grid">
+          <button class="skill" type="button" data-skill="hardware">
+            <h3>Hardware & Network</h3>
+            <p>
+              PC Assembly<br />Laptop Repair<br />CCTV Systems<br />TCP/IP ·
+              LAN/WAN<br />Router/Switch Configuration
+            </p></button
+          ><button class="skill" type="button" data-skill="admin">
+            <h3>OS & Admin</h3>
+            <p>
+              Windows 10/11<br />Windows Server<br />Active Directory Basics<br />System
+              Backup & Recovery
+            </p></button
+          ><button class="skill" type="button" data-skill="support">
+            <h3>Support & Tools</h3>
+            <p>
+              AnyDesk · TeamViewer<br />Remote Desktop<br />ERP Systems<br />Microsoft
+              365<br />IT Ticketing Systems
+            </p></button
+          ><button class="skill" type="button" data-skill="web">
+            <h3>Database & Web</h3>
+            <p>PHP · HTML/CSS<br />MySQL · MariaDB<br />Bootstrap</p></button
+          ><button class="skill" type="button" data-skill="media">
+            <h3>Media & Content</h3>
+            <p>
+              CapCut · Premiere Pro<br />Canva · Photoshop<br />Video Editing<br />Basic
+              Graphics
+            </p>
+          </button>
+        </div>
+      </section>
+      <div class="skill-modal" id="skillModal" aria-hidden="true">
+        <div class="skill-modal-backdrop" data-modal-close></div>
+        <div
+          class="skill-modal-dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="skillModalTitle"
+        >
+          <button
+            class="skill-modal-close"
+            type="button"
+            data-modal-close
+            aria-label="Close tools popup"
+          >
+            ×
+          </button>
+          <h2 id="skillModalTitle">Skills & technical tools</h2>
+          <p id="skillModalDescription"></p>
+          <div class="tool-list" id="toolList"></div>
+        </div>
+      </div>
+      <section class="resume-section contact contact-panel" id="contact">
+        <div class="contact-intro">
+          <span class="contact-kicker">05 / Contact</span>
+          <h3>Let’s keep<br /><span class="red">things moving.</span></h3>
+          <p>
+            Have a technical challenge or an opportunity? Send me a message and
+            let’s connect.
+          </p>
+          <div class="contact-links">
+            <a href="tel:0963011583"><span>Phone</span>096-301-1583 ↗</a
+            ><a href="mailto:phatsawat.b1@gmail.com"
+              ><span>Email</span>phatsawat.b1@gmail.com ↗</a
+            ><span class="contact-address"
+              ><span>Based in</span>10 / 1 M.6, Ban Chet,<br />Phanat Nikhom,
+              Chonburi 20140<br />Thailand</span
+            >
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-heading">
+            <span>Start a conversation</span
+            ><i>● Available for opportunities</i>
+          </div>
+          <label for="contactName"
+            >Name<input
+              id="contactName"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              required /></label
+          ><label for="contactEmail"
+            >Email<input
+              id="contactEmail"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required /></label
+          ><label for="contactMessage"
+            >Message<textarea
+              id="contactMessage"
+              name="message"
+              rows="4"
+              placeholder="Tell me about your project..."
+              required
+            ></textarea></label
+          ><button type="submit">Send message <span>↗</span></button>
+          <p
+            class="form-status"
+            id="formStatus"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </section>
+      <footer class="footer">
+        <span>Phatsawat Buathong / IT</span
+        ><span>Available for opportunities</span>
+      </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
